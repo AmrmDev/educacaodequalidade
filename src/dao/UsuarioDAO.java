@@ -70,7 +70,19 @@ public class UsuarioDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    public void deletar(int id) {
+            String sql = "DELETE FROM usuarios WHERE id = ?";
 
+            try (Connection conn = Conexao.conectar();
+                 PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+                stmt.setInt(1, id);
+                stmt.executeUpdate();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 }
