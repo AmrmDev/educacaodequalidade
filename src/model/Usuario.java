@@ -12,6 +12,5 @@ public class Usuario {
     private String senha;
     private String telefone;
     private String tipo; // aqui seria tipo, se for calouro, veterano e tal.
-    private String tipoSanguineo;
 }
 
