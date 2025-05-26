@@ -1,6 +1,8 @@
 package dao;
 
 import model.Usuario;
+import util.TipoUsuario;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +21,7 @@ public class UsuarioDAO {
             stmt.setString(2, usuario.getEmail());
             stmt.setString(3, usuario.getSenha());
             stmt.setString(4, usuario.getTelefone());
-            stmt.setString(5, usuario.getTipo());
+            stmt.setString(5, usuario.getTipo().name());
 
             stmt.executeUpdate();
         } catch (Exception e) {
@@ -42,7 +44,7 @@ public class UsuarioDAO {
                 usuario.setEmail(rs.getString("email"));
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setTelefone(rs.getString("telefone"));
-                usuario.setTipo(rs.getString("tipo"));
+                usuario.setTipo(TipoUsuario.valueOf(rs.getString("tipo")));
 
                 lista.add(usuario);
             }
@@ -62,7 +64,7 @@ public class UsuarioDAO {
             stmt.setString(2, usuario.getEmail());
             stmt.setString(3, usuario.getSenha());
             stmt.setString(4, usuario.getTelefone());
-            stmt.setString(5, usuario.getTipo());
+            stmt.setString(5, usuario.getTipo().name());
             stmt.setInt(6, usuario.getId());
 
             stmt.executeUpdate();
