@@ -30,5 +30,13 @@ public class TesteProjetoDAO {
                     ", Responsavel: " + p.getUsuarioResponsavel() +
                     ", Status: " + p.getStatus());
         }
+        // teste para atualizar (depois me lembra de explicar a lógica.)
+        if (!lista.isEmpty()) {
+            Projeto primeiroProjeto = lista.get(0);
+            primeiroProjeto.setStatus("Concluído");
+            projetoDAO.atualizar(primeiroProjeto);
+            System.out.println("\n Projeto com ID " + primeiroProjeto.getId() + "atualizado para status concluído.");
+        }
+
     }
 }
