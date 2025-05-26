@@ -38,5 +38,11 @@ public class TesteProjetoDAO {
             System.out.println("\n Projeto com ID " + primeiroProjeto.getId() + "atualizado para status concluído.");
         }
 
+        // teste pra deletar (pede explicação tbm pq agora é 2:28 da manhã e eu to sem cabeça pra escreber aqui fodase tmj é nois)
+        if (!lista.isEmpty()) {
+            Projeto ultimoProjeto = lista.get(lista.size() - 1);
+            projetoDAO.deletar(ultimoProjeto.getId());
+            System.out.println("Projeto com ID " + ultimoProjeto.getId() + "deletado.");
+        }
     }
 }
