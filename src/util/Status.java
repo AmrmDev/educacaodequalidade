@@ -1,4 +1,7 @@
 package util;
 
-public class Status {
+public enum Status {
+    ON,
+    OFF,
+    ONGOING;
 }

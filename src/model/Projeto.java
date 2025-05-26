@@ -3,6 +3,8 @@ package model;
 import lombok.Data;
 import lombok.Setter;
 import lombok.Getter;
+import util.Status;
+
 import java.time.LocalDate;
 
 
@@ -16,5 +18,5 @@ public class Projeto {
     private String usuarioResponsavel;
     private String telefone;
     private LocalDate dataCriacao;
-    private String status;
+    private Status status;
 }
