@@ -1,6 +1,5 @@
 package dao;
 
-import com.sun.security.auth.UnixNumericUserPrincipal;
 import model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
